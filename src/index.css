@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes rainbow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-rainbow-border {
+  position: relative;
+  padding: 1px; /* Adjust padding to account for the border */
+  background: linear-gradient(white, white) padding-box,
+    /* inner white background */
+      linear-gradient(270deg, #ff4545, #00ff99, #006aff, #ff0095, #ff4545)
+      border-box; /* gradient border */
+  border: 3px solid transparent;
+  background-size: 200% 200%;
+  animation: rainbow 2s ease infinite;
+  border-radius: 8px;
+}
+
+.animated-rainbow-border-content {
+  position: relative;
+  /* background: #27272a; */
+  /* background: rgb(148, 99, 99); */
+  padding: 16px;
+  border-radius: inherit;
+}

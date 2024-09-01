@@ -39,7 +39,7 @@ const GlobalContextProvider = ({ children }) => {
         }
     }
     useEffect(() => {
-        FetchNews(`https://newsdata.io/api/1/latest?apikey=pub_498887a82cc4403436bd11d3090f827da2127&country=${country}&language=en`);
+        FetchNews(`${import.meta.env.VITE_BASE_URL}?apikey=${import.meta.env.VITE_API_KEY}&country=${country}&language=en`);
     }, [country])
     useEffect(() => {
         if(theme === "dark"){

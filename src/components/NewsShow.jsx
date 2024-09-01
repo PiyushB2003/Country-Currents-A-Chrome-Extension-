@@ -30,7 +30,6 @@ const NewsShow = () => {
       }
     </div>
   )
-
 }
 
 export default NewsShow
